@@ -1,0 +1,111 @@
+#root { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel2 .wrapper {
+  padding: 30px 15px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.carousel2 .carousel-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carousel2 .carousel-header h2 {
+  margin: 0px 20px 0px 0px;
+  font-weight: 600;
+}
+
+.carousel2 .carousel-header a {
+  color: #008296;
+  cursor: pointer;
+}
+
+.carousel2 .carousel-header a:hover {
+  color: #C7511F;
+  text-decoration: underline;
+}
+
+.carousel2 .swiper-container {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.carousel2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.carousel2 .swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.carousel2 .swiper-button-next, .carousel2 .swiper-button-prev {
+  top: 25%;
+  margin-top: 0px;
+  color: #333;
+  width: 50px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid #ccc;
+}
+
+.carousel2 .swiper-button-next {
+  right: 0px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-right: 2px solid transparent;
+}
+
+.carousel2 .swiper-button-prev {
+  left: 0px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-left: 2px solid transparent;
+}
+
+.carousel2 .swiper-button-next:active, .carousel2 .swiper-button-prev:active {
+  border-color: #008296;
+}
+
+.carousel2 .swiper-button-next:after, .carousel2 .swiper-button-prev:after {
+  /*content:"";*/
+}
+
+.carousel2 .swiper-scrollbar {
+  bottom: 1px;
+}

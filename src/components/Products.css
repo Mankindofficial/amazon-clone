@@ -1,0 +1,148 @@
+.products {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0px;
+	position: relative;
+	background: transparent;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 20px;
+}
+
+.product {
+	width: 100%;
+	height: 420px;
+	padding: 20px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	/*justify-content: space-between;*/
+}
+
+.product h2 {
+	margin: 0px;
+}
+
+.product .imageContainer {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	padding: 15px 0px;
+}
+
+.product img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.product a {
+	color: #007185;
+	font-size: 13px;
+	word-spacing: 2;
+	margin-top: auto;
+}
+.product a:hover {
+	color: #C7511F;
+	text-decoration: underline;
+}
+
+.product .multipleImageContainer {
+	width: 100%;
+	padding: 15px 0px;
+	margin-bottom: 1px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2px;
+}
+
+.product .multipleImageContainer .smallGridItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	padding: 10px; 
+}
+
+.product .multipleImageContainer .smallGridItem span {
+	height: 36px;
+	font-size: 12px;
+	text-align: center;
+  line-height: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.product .multipleImageContainer .smallGridItem img {
+	width: 100%;
+	height: 85px;
+	object-fit: contain;
+}
+
+.product .layerA {
+	height: 100% !important;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 2;
+	background: rgba(0,164,180,.05);
+}
+
+.products .pageAd {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.products .pageAd .signIn {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+.products .pageAd .signIn h2 {
+	margin-top: 0px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.products .pageAd .signIn button {
+	width: 100%;
+	text-align: center;
+	border: 1px solid #111;
+	border-radius: 4px;
+	padding: 8px 15px;
+	font-weight: lighter;
+	font-size: 13px;
+	color: #111;
+	background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+}
+
+.products .pageAd .signIn button:hover {
+	background: linear-gradient(rgb(245, 215, 142), rgb(238, 185, 51))
+}
+
+.products .pageAd .adImageContainer {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.products .pageAd .adImageContainer img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+
+
+
+

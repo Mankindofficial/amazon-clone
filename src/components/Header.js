@@ -3,13 +3,13 @@ import './Header.css'
 const Header = () => {
 
 	return (
-		<header>
+		<header className="header">
 			<div className="page-header">
 				<div className="header-group1">
-					<div className="amazon-logo">
+					<div className="amazon-logo hover-effect">
 						<img src="/images/amazon-logo.png" alt="LOGO" />
 					</div>
-					<div className="delivery-location">
+					<div className="delivery-location hover-effect">
 						<span><i className="fa fa-search"></i></span>
 						<div className="span-flex">
 							<span>Deliver to</span>
@@ -48,18 +48,18 @@ const Header = () => {
 					<button><i className="fa fa-search"/></button>
 				</div>
 				<div className="header-group3">
-					<div>
+					<div className="span-flex hover-effect">
 						<span><i className="fa fa-search"></i></span>
 					</div>
-					<div className="span-flex">
+					<div className="span-flex hover-effect">
 						<span>Hello, Sign In</span>
 						<span>Accounts & Lists</span>
 					</div>
-					<div className="span-flex">
+					<div className="span-flex hover-effect">
 						<span>Returns</span>
 						<span>& Orders</span>
 					</div>
-					<div className="span-flex2">
+					<div className="span-flex2 hover-effect">
 						<span><i className="fa fa-search"></i></span>
 						<span>Cart</span>
 						<span className="cart-number">0</span>
