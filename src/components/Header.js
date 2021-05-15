@@ -1,16 +1,22 @@
 import './Header.css'
+import { Link } from 'react-router-dom'
+import { ContextConsumer } from '../AppContext'
 
 const Header = () => {
 
+  const { state } = ContextConsumer()
+
 	return (
 		<header className="header">
-			<div className="page-header">
+			<div id="page-header">
 				<div className="header-group1">
-					<div className="amazon-logo hover-effect">
-						<img src="/images/amazon-logo.png" alt="LOGO" />
-					</div>
+					<Link to="/">
+						<div className="amazon-logo hover-effect">
+							<img src="/images/amazon-logo.png" alt="LOGO" />
+						</div>
+					</Link>
 					<div className="delivery-location hover-effect">
-						<span><i className="fa fa-search"></i></span>
+						<span><img src="/images/location.svg" alt="User location" /></span>
 						<div className="span-flex">
 							<span>Deliver to</span>
 							<span>Nigeria</span>
@@ -45,31 +51,37 @@ const Header = () => {
 						<option>All Categories</option>
 					</select>
 					<input type="text"/>
-					<button><i className="fa fa-search"/></button>
+					<button><img src="/images/search.svg" alt="search" /></button>
 				</div>
 				<div className="header-group3">
-					<div className="span-flex hover-effect">
-						<span><i className="fa fa-search"></i></span>
+					<div className="hover-effect location">
+						<img src="/images/usa-flag.svg" alt="location" />
+						<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
 					</div>
 					<div className="span-flex hover-effect">
 						<span>Hello, Sign In</span>
-						<span>Accounts & Lists</span>
+						<span>
+							Accounts & Lists
+							<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
+						</span>
 					</div>
 					<div className="span-flex hover-effect">
 						<span>Returns</span>
 						<span>& Orders</span>
 					</div>
-					<div className="span-flex2 hover-effect">
-						<span><i className="fa fa-search"></i></span>
-						<span>Cart</span>
-						<span className="cart-number">0</span>
-					</div>
+					<Link to="/checkout">
+						<div className="span-flex2 hover-effect">
+							<span><img src="/images/cart.svg" alt="cart"/></span>
+							<span>Cart</span>
+							<span className="cart-number">{state.basket.length}</span>
+						</div>
+					</Link>
 				</div>
 			</div>
 			<nav>
 				<ul>
 					<li>All</li>
-					<li>Today's Deals</li>
+					<Link to="/products"><li>Today's Deals</li></Link>
 					<li>Customer Service</li>
 					<li>Gift Cards</li>
 					<li>Registry</li>

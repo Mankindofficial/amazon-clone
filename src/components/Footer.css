@@ -1,5 +1,8 @@
 .footer {
 	background-color: #37475A;
+	/*position: absolute;*/
+	bottom:0px;
+	width: 100%;
 }
 
 .page-footer {
@@ -16,6 +19,13 @@
 
 .page-footer a {
 	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.page-footer a img {
+	width:20px;
+	transform: rotate(180deg);
 }
 
 .footer:hover {

@@ -49,6 +49,7 @@ const Carousel2 = () => {
 		    	scrollbar={{ "hide": true }} 
 		    	navigation={true}
 		    	slidesPerView={6} 
+		    	slidesPerGroup={3} 
 		    	className="mySwiper"
 		    >
 				  <SwiperSlide><img src="/images/carouselc1.jpg" alt="" /></SwiperSlide>
@@ -75,6 +76,7 @@ const Carousel2 = () => {
 		    	scrollbar={{ "hide": true }} 
 		    	navigation={true}
 		    	slidesPerView={6} 
+		    	slidesPerGroup={3} 
 		    	className="mySwiper"
 		    >
 				  <SwiperSlide><img src="/images/carouseld1.jpg" alt="" /></SwiperSlide>

@@ -4,15 +4,15 @@
 	padding: 20px 0px;
 	position: relative;
 	background: transparent;
-	z-index: 2;
+	z-index: 1;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-gap: 20px;
 }
 
-.product {
+.products .product {
 	width: 100%;
-	height: 420px;
+	min-height: 420px;
 	padding: 20px;
 	background-color: white;
 	display: flex;
@@ -21,35 +21,35 @@
 	/*justify-content: space-between;*/
 }
 
-.product h2 {
+.products .product h2 {
 	margin: 0px;
 }
 
-.product .imageContainer {
+.products .product .imageContainer {
 	flex: 1;
 	width: 100%;
 	height: 100%;
 	padding: 15px 0px;
 }
 
-.product img {
+.products .product img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.product a {
+.products .product a {
 	color: #007185;
 	font-size: 13px;
 	word-spacing: 2;
 	margin-top: auto;
 }
-.product a:hover {
+.products .product a:hover {
 	color: #C7511F;
 	text-decoration: underline;
 }
 
-.product .multipleImageContainer {
+.products .product .multipleImageContainer {
 	width: 100%;
 	padding: 15px 0px;
 	margin-bottom: 1px;
@@ -58,7 +58,7 @@
 	grid-gap: 2px;
 }
 
-.product .multipleImageContainer .smallGridItem {
+.products .product .multipleImageContainer .smallGridItem {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -66,7 +66,7 @@
 	padding: 10px; 
 }
 
-.product .multipleImageContainer .smallGridItem span {
+.products .product .multipleImageContainer .smallGridItem span {
 	height: 36px;
 	font-size: 12px;
 	text-align: center;
@@ -75,13 +75,13 @@
   align-items: flex-end;
 }
 
-.product .multipleImageContainer .smallGridItem img {
+.products .product .multipleImageContainer .smallGridItem img {
 	width: 100%;
 	height: 85px;
 	object-fit: contain;
 }
 
-.product .layerA {
+.products .product .layerA {
 	height: 100% !important;
 	position: absolute;
 	top: 0px;
@@ -96,6 +96,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	height: 100%;
 }
 
 .products .pageAd .signIn {
@@ -107,7 +108,7 @@
 }
 
 .products .pageAd .signIn h2 {
-	margin-top: 0px;
+	margin: 0px 0px 15px;
 	font-weight: bold;
 	text-align: left;
 }

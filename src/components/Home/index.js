@@ -9,7 +9,7 @@ const Home = () => {
 	return (
 		<div>
 			<Carousel />
-			<div style={{width:"95%", maxWidth:"1536px", margin:"0 auto"}}>
+			<div style={{width:"calc(100% - 50px)", maxWidth:"1536px", margin:"0 auto"}}>
 				<Products />
 				<Carousel2 />
 				<Products2 />

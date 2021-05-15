@@ -40,7 +40,7 @@ const Products = () => {
 					<button>Sign In Securely</button>
 				</div>
 				<div className="adImageContainer">
-					<img src="/images/product3.jpg" alt="AMAZON-ADS" />
+					<img src="/images/amazonAd.jpg" alt="AMAZON-ADS" />
 				</div>
 			</div>
 			<Product title="Shop Top Categories" src="/images/product3.jpg" href="/" text="See More"/>

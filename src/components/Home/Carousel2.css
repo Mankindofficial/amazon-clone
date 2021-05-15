@@ -77,33 +77,44 @@ body {
 .carousel2 .swiper-button-next, .carousel2 .swiper-button-prev {
   top: 25%;
   margin-top: 0px;
-  color: #333;
-  width: 50px;
+  width: 40px;
   height: 100px;
-  background-color: white;
-  border: 2px solid #ccc;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #ddd;
+  transition: all 0.3s;
 }
 
 .carousel2 .swiper-button-next {
   right: 0px;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border-right: 2px solid transparent;
 }
 
 .carousel2 .swiper-button-prev {
   left: 0px;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   border-left: 2px solid transparent;
+}
+
+.carousel2 .wrapper:hover .swiper-button-next, .carousel2 .wrapper:hover .swiper-button-prev {
+  opacity: 1;
 }
 
 .carousel2 .swiper-button-next:active, .carousel2 .swiper-button-prev:active {
   border-color: #008296;
 }
 
-.carousel2 .swiper-button-next:after, .carousel2 .swiper-button-prev:after {
-  /*content:"";*/
+.carousel2 .swiper-button-next:after {
+  content: url(right-arrow.svg);
+  width: 35px;
+} 
+
+.carousel2 .swiper-button-prev:after {
+  content: url(left-arrow.svg);
+  width: 35px;
 }
 
 .carousel2 .swiper-scrollbar {
