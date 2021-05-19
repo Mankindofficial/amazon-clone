@@ -11,7 +11,7 @@ const Subtotal = () => {
 
   const getTotalPrice = () => {
     let price = 0;
-    state.basket.map(item => {
+    state.basket.forEach(item => {
       price += item.price
     })
     return price

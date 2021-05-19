@@ -18,7 +18,7 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="page-footer">
-				<a className="back-to-top" href="#" style={{display:show}}>
+				<a className="back-to-top" href="/#" style={{display:show}}>
 					Back to Top
 					<img src="/images/caret-down.svg" alt="top"/>
 				</a>
