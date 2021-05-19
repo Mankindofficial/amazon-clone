@@ -1,17 +1,24 @@
 import './Header.css'
 import { Link } from 'react-router-dom'
 import { ContextConsumer } from '../AppContext'
+import { auth } from '../firebase'
 
 const Header = () => {
 
   const { state } = ContextConsumer()
+
+  const handleAuthenticaton = () => {
+    if (state.user) {
+      auth.signOut();
+    }
+  }
 
 	return (
 		<header className="header">
 			<div id="page-header">
 				<div className="header-group1">
 					<Link to="/">
-						<div className="amazon-logo hover-effect">
+						<div className="amazon-logo hover-effect show-sm">
 							<img src="/images/amazon-logo.png" alt="LOGO" />
 						</div>
 					</Link>
@@ -37,18 +44,18 @@ const Header = () => {
 						<option>All Categories</option>
 						<option>All Categories</option>
 						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
+						<option>All Categories</option>
 						<option>All Categories that are necessary</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
-						<option>All Categories</option>
 					</select>
 					<input type="text"/>
 					<button><img src="/images/search.svg" alt="search" /></button>
@@ -58,19 +65,23 @@ const Header = () => {
 						<img src="/images/usa-flag.svg" alt="location" />
 						<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
 					</div>
-					<div className="span-flex hover-effect">
-						<span>Hello, Sign In</span>
-						<span>
-							Accounts & Lists
-							<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
-						</span>
-					</div>
-					<div className="span-flex hover-effect">
-						<span>Returns</span>
-						<span>& Orders</span>
-					</div>
+					<Link to={state.user ? "#" : "/login"}>
+						<div className="span-flex hover-effect" onClick={handleAuthenticaton}>
+							<span>Hello, {state.user?.email || "Guest"}</span>
+							<span>
+								{state.user ? "Sign Out" : "Sign In"}
+								<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
+							</span>
+						</div>
+					</Link>
+					<Link to="/orders">
+						<div className="span-flex hover-effect">
+							<span>Returns</span>
+							<span>& Orders</span>
+						</div>
+					</Link>
 					<Link to="/checkout">
-						<div className="span-flex2 hover-effect">
+						<div className="span-flex2 hover-effect show-sm">
 							<span><img src="/images/cart.svg" alt="cart"/></span>
 							<span>Cart</span>
 							<span className="cart-number">{state.basket.length}</span>

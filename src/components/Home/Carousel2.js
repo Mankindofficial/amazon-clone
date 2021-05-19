@@ -18,6 +18,17 @@ SwiperCore.use([Scrollbar, Navigation]);
 
 
 const Carousel2 = () => {   
+
+	let slide1, slide2, slideNumber;
+	if (window.innerWidth > 768) {
+		slide1 = 5.5;
+		slide2 = 6;
+		slideNumber = 3;
+	} else if (window.innerWidth <= 768 && window.innerWidth >= 450 ) {
+		slide1 = slide2 = slideNumber = 2;
+	} else if (window.innerWidth < 450) {
+		slide1 = slide2 = slideNumber = 1;
+	}
   
   return (
   	<div className="carousel2">
@@ -29,7 +40,7 @@ const Carousel2 = () => {
 		    <Swiper 
 		    	scrollbar={{ "hide": true }} 
 		    	navigation={true}
-		    	slidesPerView={5.5} 
+		    	slidesPerView={slide1} 
 		    	className="mySwiper"
 		    >
 				  <SwiperSlide><img src="/images/carousel1.jpg" alt="" /></SwiperSlide>
@@ -48,8 +59,8 @@ const Carousel2 = () => {
 		    <Swiper 
 		    	scrollbar={{ "hide": true }} 
 		    	navigation={true}
-		    	slidesPerView={6} 
-		    	slidesPerGroup={3} 
+		    	slidesPerView={slide2} 
+		    	slidesPerGroup={slideNumber} 
 		    	className="mySwiper"
 		    >
 				  <SwiperSlide><img src="/images/carouselc1.jpg" alt="" /></SwiperSlide>
@@ -75,8 +86,8 @@ const Carousel2 = () => {
 		    <Swiper 
 		    	scrollbar={{ "hide": true }} 
 		    	navigation={true}
-		    	slidesPerView={6} 
-		    	slidesPerGroup={3} 
+		    	slidesPerView={slide2} 
+		    	slidesPerGroup={slideNumber} 
 		    	className="mySwiper"
 		    >
 				  <SwiperSlide><img src="/images/carouseld1.jpg" alt="" /></SwiperSlide>

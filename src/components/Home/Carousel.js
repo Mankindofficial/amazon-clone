@@ -20,7 +20,6 @@ const Carousel = () => {
   return (
     <div className="carousel">
 	    <Swiper 
-	    	style={{'--swiper-navigation-color': '#fff','--swiper-pagination-color': '#fff'}}
 	    	navigation={true} 
 	    	loop={true} 
 	    	zoom={true} 
@@ -31,34 +30,20 @@ const Carousel = () => {
 	    	className="mySwiper"
 	    >
 		 		<SwiperSlide>
-		 			<div className="swiper-zoom-container">
 		 				<img src="/images/amazon-backgroundImage1.jpg" alt=""/>
-		 			</div>
 		 		</SwiperSlide>
 		 		<SwiperSlide>
-		 			<div className="swiper-zoom-container">
 		 				<img src="/images/amazon-backgroundImage2.jpg" alt=""/>
-		 			</div>
 		 		</SwiperSlide>
 		 		<SwiperSlide>
-		 			<div className="swiper-zoom-container">
 		 				<img src="/images/amazon-backgroundImage3.jpg" alt=""/>
-		 			</div>
 		 		</SwiperSlide>
 		 		<SwiperSlide>
-		 			<div className="swiper-zoom-container">
 		 				<img src="/images/amazon-backgroundImage4.jpg" alt=""/>
-		 			</div>
 		 		</SwiperSlide>
 		 		<SwiperSlide>
-		 			<div className="swiper-zoom-container">
 		 				<img src="/images/amazon-backgroundImage5.jpg" alt=""/>
-		 			</div>
 		 		</SwiperSlide>
-		 		{/*<SwiperSlide><img src="/images/amazon-backgroundImage2.jpg" alt=""/></SwiperSlide>
-		 		<SwiperSlide><img src="/images/amazon-backgroundImage3.jpg" alt=""/></SwiperSlide>
-		 		<SwiperSlide><img src="/images/amazon-backgroundImage4.jpg" alt=""/></SwiperSlide>
-		 		<SwiperSlide><img src="/images/amazon-backgroundImage5.jpg" alt=""/></SwiperSlide>*/}
 			</Swiper>
     </div>
   )

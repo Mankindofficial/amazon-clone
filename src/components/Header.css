@@ -204,7 +204,8 @@ header, header a {
 }
 
 .header nav ul li {
-	font-size: 14px;
+	font-size: 15px;
+	font-weight: 500;
 	height: 28px;
 	display: flex;
 	align-items: center;
@@ -221,4 +222,29 @@ header, header a {
 .header nav ul .last {
 	font-weight: bold;
 	margin-left: auto;
+}
+
+@media (max-width: 768px) {
+	.header .amazon-logo {
+		width:80px;
+		margin-right: 0px;
+	}
+	.header .hover-effect, .header nav {
+		display:none !important;
+	}
+	.header .hover-effect.show-sm {
+		display:flex !important;
+	}
+	.header .input-group select {
+		display:none;
+	}
+	.header .input-group input {
+		border-radius: 5px 0px 0px 5px;
+	}
+}
+
+@media (max-width: 321px) {
+	.header .input-group {
+		display: none;
+	}
 }

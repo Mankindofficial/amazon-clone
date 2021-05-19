@@ -5,3 +5,15 @@
 body {
   background-color: #EAEDED;
 }
+
+.homepage {
+	width: calc(100% - 50px);
+	max-width: 1536px;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	.homepage {
+		width: calc(100% - 20px);
+	}
+}

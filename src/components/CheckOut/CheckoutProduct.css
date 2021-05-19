@@ -36,3 +36,28 @@
     font-size: 17px;
     font-weight: 800;
 }
+
+
+@media (max-width: 768px) {
+  .checkout {
+    /*flex-direction: column-reverse;*/
+  }
+  .checkoutProduct__info {
+    padding: 0px;
+  }
+  .checkoutProduct__image {
+    display: flex;
+    align-items: center;
+  }
+  .checkoutProduct__image img {
+    width: 100px;
+    height: 100px;
+  }
+  .checkoutProduct__title {
+    font-size:15px;
+  }
+  .checkoutProduct__price {
+    color:orange;
+    font-size:16px;
+  }
+}

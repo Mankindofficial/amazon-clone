@@ -1,6 +1,6 @@
 .footer {
 	background-color: #37475A;
-	/*position: absolute;*/
+	position: absolute;
 	bottom:0px;
 	width: 100%;
 }
@@ -30,4 +30,16 @@
 
 .footer:hover {
 	background-color: #485769;
+}
+
+@media (max-width: 768px) {
+	.page-footer p {
+		display:none;
+	}
+	.page-footer {
+		justify-content: center;
+	}
+	.page-footer .back-to-top {
+		margin-right: auto;
+	}
 }

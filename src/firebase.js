@@ -1,14 +1,18 @@
-import firebase from 'firebase'
+import firebase from "firebase";
 
-const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyDrLKxRoYTnUB2cH6x7G-gnkI-h54Rozs8",
-    authDomain: "clone-ws-a7183.firebaseapp.com",
-    projectId: "clone-ws-a7183",
-    storageBucket: "clone-ws-a7183.appspot.com",
-    messagingSenderId: "190021235475",
-    appId: "1:190021235475:web:4f355cd77d5550330960e6"
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyAdFAyJNvpskOOHR335pjg6ccmpBaQ385k",
+  authDomain: "app-clone-e71f1.firebaseapp.com",
+  projectId: "app-clone-e71f1",
+  storageBucket: "app-clone-e71f1.appspot.com",
+  messagingSenderId: "89621655346",
+  appId: "1:89621655346:web:01053abec7c74f298d312b",
+  measurementId: "G-SV82SV3GY5"
+};
 
-const db = firebaseApp.firestore()
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export { db }
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export { db, auth };

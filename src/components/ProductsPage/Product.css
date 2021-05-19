@@ -37,6 +37,8 @@
   color: #111;
   align-self: center;
   cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .home_ .product > button:hover {
@@ -50,4 +52,17 @@
 .home_ .product__info {
   height: 100px;
   margin-bottom: 15px;
+}
+
+.home_ .product__title {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .home_ .product {
+    margin: 10px auto;
+    padding: 20px 10px;
+    width: 95%;
+  }
 }

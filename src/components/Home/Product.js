@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Products.css'
 
 const Product = ({title, src, href, text}) => {
@@ -7,9 +8,11 @@ const Product = ({title, src, href, text}) => {
 		<div className="product">
 			<h2>{title}</h2>
 			<div className="imageContainer">
-				<img src={src} alt={title} />
+				<Link to="/products">
+					<img src={src} alt={title} />
+				</Link>
 			</div>
-			<a href={href}>{text}</a>
+			<Link to="/products">{text}</Link>
 		</div>
 	)
 }
