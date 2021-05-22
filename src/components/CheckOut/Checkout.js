@@ -6,7 +6,7 @@ import CheckoutProduct from './CheckoutProduct'
 
 const Checkout = () => {
 
-  const { state } = ContextConsumer()
+  const { user, basket } = ContextConsumer()
 
   return (
     <div className="checkout">
@@ -17,9 +17,9 @@ const Checkout = () => {
           alt=""
         />
         <div>
-          <h3>{state.user && `Hello, ${state.user?.email}`}</h3>
+          <h3>{user && `Hello, ${user?.email}`}</h3>
           <h2 className="checkout__title">Your Shopping Basket</h2>
-          {state.basket.map(item => (
+          {basket.map(item => (
             <CheckoutProduct
               id={item.id}
               title={item.title}

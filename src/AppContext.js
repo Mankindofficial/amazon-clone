@@ -10,14 +10,14 @@ const ContextConsumer = () => {
 
 const AppContext = (props) => {
 
-	const [state, setState] = useState({
-		basket: [],
-		user: null
-	})
+	const [user, setUser] = useState(null)
+	const [basket, setBasket] = useState([])
 
 	const value = {
-		state: state,
-		setState: setState,
+		user: user,
+		basket: basket,
+		setUser: setUser,
+		setBasket: setBasket,
 	}
 
 	return(

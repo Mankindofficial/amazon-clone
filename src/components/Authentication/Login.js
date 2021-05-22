@@ -6,7 +6,7 @@ import { auth } from "../../firebase";
 
 const Login = () => {
 
-    const { state, setState } = ContextConsumer()
+    const { setUser } = ContextConsumer()
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -16,10 +16,7 @@ const Login = () => {
         auth.signInWithEmailAndPassword(email, password)
             .then(userCredential => {
                 history.push('/')
-                setState({
-                    ...state, 
-                    user: userCredential.user
-                })
+                setUser(userCredential.user)
             })
             .catch(error => alert(error.message))
     }
@@ -31,10 +28,7 @@ const Login = () => {
                 // it successfully created a new user with email and password
                 if (userCredential) {
                     history.push('/')
-                    setState({
-                        ...state, 
-                        user: userCredential.user
-                    })
+                    setUser(userCredential.user)
                 }
             })
             .catch(error => alert(error.message))

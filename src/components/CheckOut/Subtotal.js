@@ -7,11 +7,11 @@ import { ContextConsumer } from "../../AppContext";
 const Subtotal = () => {
 
   const history = useHistory();
-  const { state } = ContextConsumer();
+  const { basket } = ContextConsumer();
 
   const getTotalPrice = () => {
     let price = 0;
-    state.basket.forEach(item => {
+    basket.forEach(item => {
       price += item.price
     })
     return price
@@ -23,7 +23,7 @@ const Subtotal = () => {
         renderText={(value) => (
           <>
             <p>
-              Subtotal ({state.basket.length} items): <strong>{value}</strong>
+              Subtotal ({basket.length} items): <strong>{value}</strong>
             </p>
             <small className="subtotal__gift">
               <input type="checkbox" /> This order contains a gift

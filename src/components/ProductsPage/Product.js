@@ -4,22 +4,19 @@ import { ContextConsumer } from "../../AppContext";
 
 function Product({ id, title, image, price, rating }) {
 
-  const { state, setState } = ContextConsumer();
+  const { basket, setBasket } = ContextConsumer();
 
   const addToBasket = () => {
-    setState({
-      ...state,
-      basket: [
-        ...state.basket, 
-        {
-          id: id,
-          title: title,
-          image: image,
-          price: price,
-          rating: rating,
-        }
-      ]
-    });
+    setBasket([
+      ...basket, 
+      {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      }
+    ])
   };
 
   return (

@@ -5,10 +5,10 @@ import { auth } from '../firebase'
 
 const Header = () => {
 
-  const { state } = ContextConsumer()
+  const { user, basket } = ContextConsumer()
 
   const handleAuthenticaton = () => {
-    if (state.user) {
+    if (user) {
       auth.signOut();
     }
   }
@@ -18,11 +18,11 @@ const Header = () => {
 			<div id="page-header">
 				<div className="header-group1">
 					<Link to="/">
-						<div className="amazon-logo hover-effect show-sm">
+						<div className="amazon-logo hover-effect show-sm"  title="Mankind Amazon Site">
 							<img src="/images/amazon-logo.png" alt="LOGO" />
 						</div>
 					</Link>
-					<div className="delivery-location hover-effect">
+					<div className="delivery-location hover-effect" title="Deliver to:">
 						<span><img src="/images/location.svg" alt="User location" /></span>
 						<div className="span-flex">
 							<span>Deliver to</span>
@@ -30,7 +30,7 @@ const Header = () => {
 						</div>
 					</div>
 				</div>
-				<div className="input-group">
+				<div className="input-group" title="Find Item">
 					<select className="nav-select">
 						<option>All</option>
 						<option>All Categories</option>
@@ -60,31 +60,31 @@ const Header = () => {
 					<input type="text"/>
 					<button><img src="/images/search.svg" alt="search" /></button>
 				</div>
-				<div className="header-group3">
+				<div className="header-group3" title="User Location">
 					<div className="hover-effect location">
 						<img src="/images/usa-flag.svg" alt="location" />
 						<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
 					</div>
-					<Link to={state.user ? "#" : "/login"}>
-						<div className="span-flex hover-effect" onClick={handleAuthenticaton}>
-							<span>Hello, {state.user?.email || "Guest"}</span>
+					<Link to={user ? "#" : "/login"}>
+						<div className="span-flex hover-effect" title="SIGN OUT" onClick={handleAuthenticaton}>
+							<span>Hello, {user?.email || "Guest"}</span>
 							<span>
-								{state.user ? "Sign Out" : "Sign In"}
+								{user ? "Sign Out" : "Sign In"}
 								<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
 							</span>
 						</div>
 					</Link>
 					<Link to="/orders">
-						<div className="span-flex hover-effect">
+						<div className="span-flex hover-effect" title="Orders">
 							<span>Returns</span>
 							<span>& Orders</span>
 						</div>
 					</Link>
 					<Link to="/checkout">
-						<div className="span-flex2 hover-effect show-sm">
+						<div className="span-flex2 hover-effect show-sm" title="Cart">
 							<span><img src="/images/cart.svg" alt="cart"/></span>
 							<span>Cart</span>
-							<span className="cart-number">{state.basket.length}</span>
+							<span className="cart-number">{basket.length}</span>
 						</div>
 					</Link>
 				</div>

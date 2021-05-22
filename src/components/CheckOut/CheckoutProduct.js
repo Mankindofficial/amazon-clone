@@ -4,13 +4,13 @@ import { ContextConsumer } from '../../AppContext'
 
 const CheckoutProduct = ({ id, image, title, price, rating, hideButton }) => {
 
-  const { state, setState } = ContextConsumer()
+  const { basket, setBasket } = ContextConsumer()
 
   const removeFromBasket = () => {
-    const index = state.basket.findIndex(
+    const index = basket.findIndex(
       (basketItem) => basketItem.id === id
     );
-    let newBasket = [...state.basket];
+    let newBasket = [...basket];
 
     if (index >= 0) {
       newBasket.splice(index, 1);
@@ -19,10 +19,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, hideButton }) => {
         `Cant remove product (id: ${id}) as its not in basket!`
       )
     }
-    setState({
-    	...state,
-      basket: newBasket
-    })
+    setBasket(newBasket)
   }
 
   return (
@@ -40,7 +37,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, hideButton }) => {
               {Array(rating)
               .fill()
               .map((_, i) => (
-                  <p>🌟</p>
+                  <p key={i}>🌟</p>
               ))}
           </div>
           {!hideButton && (

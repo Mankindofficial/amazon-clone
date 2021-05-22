@@ -13,23 +13,19 @@ import './App.css'
 
 const App = () => {
 
-  const { state, setState } = ContextConsumer()
+  const { setUser } = ContextConsumer()
 
-  useEffect(() => {
+  const authFunction = () => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        setState({
-          ...state,
-          user: authUser
-        })
+        setUser(authUser)
       } else {
-        setState({
-          ...state,
-          user: null
-        })
+        setUser(null)
       }
     });
-  });
+  }
+
+  useEffect(authFunction, [setUser]);
 
   return (
     <Router>

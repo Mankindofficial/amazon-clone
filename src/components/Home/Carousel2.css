@@ -92,8 +92,9 @@
 }
 
 .carousel2 .swiper-button-next:after {
-  content: url(right-arrow.svg);
+  content: url(left-arrow.svg);
   width: 35px;
+  transform: rotate(180deg);
 } 
 
 .carousel2 .swiper-button-prev:after {
@@ -103,4 +104,12 @@
 
 .carousel2 .swiper-scrollbar {
   bottom: 1px;
+}
+
+@media (max-width:768px) {
+  .carousel2 .swiper-button-next, .carousel2 .swiper-button-prev {
+    opacity: 0.6;
+    height: 60px;
+    top: 30%;
+  }
 }

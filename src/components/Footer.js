@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Footer.css'
 
 
 const Footer = () => {
-	const [show, setShow] = React.useState("none");
+	const [show, setShow] = useState("none");
 
 	window.onscroll = function() {scrollFunction()};
 
@@ -18,7 +18,7 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="page-footer">
-				<a className="back-to-top" href="/#" style={{display:show}}>
+				<a className="back-to-top" href="#root" style={{display:show}}>
 					Back to Top
 					<img src="/images/caret-down.svg" alt="top"/>
 				</a>
