@@ -1,7 +1,7 @@
 # Amazon App Clone
 #### Amazon official site clone
 
-Disney+ CLONE using React, Firebase, Redux, and Styled Components... 👇
+Amazon clone using React, Context API, Firebase... 👇
 
 ## Technologies used
 ⏩ React
