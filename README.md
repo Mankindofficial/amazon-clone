@@ -5,13 +5,18 @@ Disney+ CLONE using React, Firebase, Redux, and Styled Components... 👇
 
 ## Technologies used
 ⏩ React
+
 ⏩ React Context API
+
 ⏩ Firebase
 
 ## Features
 👉 Complete Amazon official website clone 💻
+
 👉 Authenticated SignIn/SignUp Functionality with Firebase 🔑
+
 👉 100% Mobile responsive 📱 ️
+
 👉 State Mangement fully handled by React Context API
 
 ## Live Demo
