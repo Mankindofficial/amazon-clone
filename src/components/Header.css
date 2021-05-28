@@ -162,8 +162,13 @@ header, header a {
 	width:20px;
 }
 
+.header .header-group3 .signin-out {
+	display: flex;
+}
+
 .header .header-group3 img.caret {
 	width:15px;
+	transform: rotate(-90deg);
 }
 
 .header .span-flex2 {

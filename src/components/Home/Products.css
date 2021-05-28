@@ -125,7 +125,7 @@
 	padding: 8px 15px;
 	font-weight: lighter;
 	font-size: 13px;
-	color: #111;
+	color: black;
 	cursor: pointer;
 	background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
 }
@@ -147,8 +147,8 @@
 }
 
 @media (max-width: 768px) {
-	.products {
-		/*grid-template-columns: 1fr;*/
+	.pageAd {
+		order: -1;
 	}
 }
 

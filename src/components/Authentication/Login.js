@@ -21,19 +21,6 @@ const Login = () => {
             .catch(error => alert(error.message))
     }
 
-    const register = e => {
-        e.preventDefault();
-        auth.createUserWithEmailAndPassword(email, password)
-            .then(userCredential => {
-                // it successfully created a new user with email and password
-                if (userCredential) {
-                    history.push('/')
-                    setUser(userCredential.user)
-                }
-            })
-            .catch(error => alert(error.message))
-    }
-
     return (
         <div className='login'>
             <Link to='/'>
@@ -62,7 +49,10 @@ const Login = () => {
                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                 </p>
 
-                <button onClick={register} className='login__registerButton'>Create your Amazon Account</button>
+                <p>
+                    Don't have an account? <a href="/signup">Register</a>
+                </p>
+
             </div>
         </div>
     )

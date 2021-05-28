@@ -68,7 +68,7 @@ const Header = () => {
 					<Link to={user ? "#" : "/login"}>
 						<div className="span-flex hover-effect" title="SIGN OUT" onClick={handleAuthenticaton}>
 							<span>Hello, {user?.email || "Guest"}</span>
-							<span>
+							<span className="signin-out">
 								{user ? "Sign Out" : "Sign In"}
 								<img className="caret" src="/images/caret-down.svg" alt="dropdown" />
 							</span>
